@@ -14,17 +14,17 @@ export function init() {
     
 }
 
-function login() {
+function login(callback) {
     var username = document.querySelector("#username").value;
     var settings = {
-        url: "https://js-final-project-o-3eba29.appdrag.site/api/getadmin",
+        url: "https://js-final-project-o-3eba29.appdrag.site/api/loginuser",
         data: {
             username: username,
             PIN: code,
         },
         method: "POST"
     }
-    Model.CallAjax(settings, postlogin); // קוראה לסטנגס ועושה פוסט לוגין
+    Model.CallAjax(settings,callback); // קוראה לסטנגס ועושה פוסט לוגין
 
 }
 
@@ -38,7 +38,7 @@ function addToCode(digit) {
    color = document.getElementById(digit).style.backgroundColor = "red";
     setCode(code + digit)
     if (code.length === 4) {
-        login()
+        login(postlogin)
         if (View.welcomeUser) {
             clearInterval(timer)
         }
@@ -90,22 +90,22 @@ clearcolor()
 function postlogin(data) { // אחרי כוללאזאקס מביא לי את הנתונים ואת כל הפרמטרים כדי להתחבר לשרת
     if (data.Table.length == 1) { // אם המשתנה של שינוי טבלה ברשת נעשה שווה ל1 אז תכנס
         View.welcomeUser(data.Table[0]);
-        numpad.style.display = "none"
+        clearInterval(timer); // מנקה
+        numpad.style.display = "none" // תסתיר את המקשים
         $("#code").empty();
-            code = ""
+        code = ""
     } else { // אם בשרת זה לא שינה תכנס לכאן
+        alert("Wrong Cradentials"); // רשמת צירוף נתונים לא נכון
+        // שמע של שגיאה
         num++;
         if (num == 3) {
             alert("The police are coming!!");
             // שומעים צליל משטרה
         }
-        alert("Wrong Cradentials"); // רשמת צירוף נתונים לא נכון
         $("#code").empty();
         code = ""
         wrong()
         clearcolor()
-        
-
     }
 }
 
