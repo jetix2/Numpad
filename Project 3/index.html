@@ -5,41 +5,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <title>Document</title>
+    <link rel="icon" href="#">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Management System</title>
 </head>
 
 <body>
+    <audio id="audioBeep" src="assets/audio/1.mp3"></audio>
+    <audio id="audioShortError" src="assets/audio/2.mp3"></audio>
+    <audio id="audioPolice" src="assets/audio/3.mp3"></audio>
+    <audio id="audioSuccess" src="assets/audio/4.mp3"></audio>
+    <audio id="audioLongError" src="assets/audio/5.mp3"></audio>
 
-
-    <div id="main">
-        <input id="username" class="btn btn-light" placeholder="Username">
-        <button id="button" type="button" class="btn btn-dark">Enter Your PIN Code</button>
+    <div id="main" style="display: none;">
+        <input id="username" class="btn btn-warning" placeholder="Username" />
+        <button id="button" class="btn btn-outline-warning">PIN Code</button>
     </div>
 
+    <img style="display: none;" id="img" src="assets/images/1221212.jpg" class="img-fluid" alt="Responsive image" width: 100%>
 
-    
+    <div id="form" style="display: none;">
+        <table class="table table-hover table-dark">
+            <thead>
+                <tr id="formadduser">
+                    <th scope="row">New Add</th>
+                    <td><input type="text" name="username" id="formUsername" class="btn btn-light" placeholder="username"></td>
+                    <td><input type="text" name="FirstName" id="formFName" class="btn btn-light" placeholder="FirstName"></td>
+                    <td><input type="text" name="Pass_Code" id="formPass_Code" type=password class="btn btn-light" placeholder="Pass_Code"></td>
+                    <td><input type="text" name="Role" id="formRole" class="btn btn-light" value="3"></td>
+                    <td><button type="submit" id="formbutton" class="btn btn-outline-light">Add</button></td>
+                </tr>
+            </thead>
+        </table>
+    </div> 
 
+    <h1 id="code"></h1>
+    <div id="numpad" style="display: none;">
+        <button id="button1" value="1" type="button" class="btn btn-outline-info">1</button>
+        <button id="button2" value="2" type="button" class="btn btn-outline-info">2</button>
+        <button id="button3" value="3" type="button" class="btn btn-outline-info">3</button>
+        <button id="button4" value="4" type="button" class="btn btn-outline-info">4</button>
+        <button id="button5" value="5" type="button" class="btn btn-outline-info">5</button>
+        <button id="button6" value="6" type="button" class="btn btn-outline-info">6</button>
+        <button id="button7" value="7" type="button" class="btn btn-outline-info">7</button>
+        <button id="button8" value="8" type="button" class="btn btn-outline-info">8</button>
+        <button id="button9" value="9" type="button" class="btn btn-outline-info">9</button>
+        <button id="button0" value="0" type="button" class="btn btn-outline-info">0</button>
+    </div>
 
+    <hr id="hr" />
+    <footer id="footer"><b>Orel Malki </b></footer>
 
-     
-
-      <h1 id="code"></h1>
-<div id="numpad">
-    <button id="1" class="btn btn-outline-primary 1" value="1">1</button>
-    <button id="2" class="btn btn-outline-primary 1" value="2">2</button>
-    <button id="3" class="btn btn-outline-primary 1" value="3">3</button>
-    <button id="4" class="btn btn-outline-primary 1" value="4">4</button>
-    <button id="5" class="btn btn-outline-primary 1" value="5">5</button>
-    <button id="6" class="btn btn-outline-primary 1" value="6">6</button>
-    <button id="7" class="btn btn-outline-primary 1" value="7">7</button>
-    <button id="8" class="btn btn-outline-primary 1" value="8">8</button>
-    <button id="9" class="btn btn-outline-primary 1" value="9">9</button>
-    <button id="0" class="btn btn-outline-primary 1" value="0">0</button>
-</div>
 </body>
 
+<script src="http://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+<script type="module" src="js/app.js"></script>
 
-<script src="http://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script type="module" src="js/app.js"></script>
 </html>

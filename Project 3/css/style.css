@@ -1,37 +1,43 @@
-
-
 #numpad {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-  
-    height: 500px;
-    width: 500px;
-    margin-left: 700px;
-    margin-top: 250px;
-    text-emphasis: bold;
-  }
-  
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 400px;
+  width: 400px;
+  margin-left: 1278px;
+  margin-top: -588px;
+}
 
 #code {
   text-align: center;
-  
+}
+#username {
+  margin: 635px;
+  font-size: 16px;
+  margin-inline-start: 840px;
+  margin-inline-end: 0px;
+  position: absolute;
+  width: 225px;
+}
+#button {
+  margin: 635px;
+  font-size: 16px;
+  margin-inline-start: 1067px;
+  margin-inline-end: 0px;
+  position: absolute;
+  width: 102px;
+}
+#0 {
+  display: inline-block;
+  margin: 314px;
 }
 
-
-h1{
-  text-align: center
-}
-.table-light {
-  background-color: rgb(207, 207, 108);
-}
-
-.alert {
+#hr {
   text-align: center;
-  ;
-}
-.alert-danger {
-  color: white;
+  width: 575px;
+  height: 1px;
+  background-color: red;
 }
 
-  
+#footer {
+  margin-inline-start: 830px;
+}
